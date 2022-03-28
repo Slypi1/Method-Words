@@ -20,24 +20,23 @@ namespace Lesson5_Method_Words
           
             string[] Words = pred.Split(' ');
 
-            Print(Words);
-
             return Words;
         }
         /// <summary>
         /// Ввыодит на консоль слова
         /// </summary>
         /// <param name="per"></param>
-        static void Print(string[] per)
-        {
-            foreach (string p in per)
+        static void Print(string per)
+         {
+            string [] str = SplittingStringWords(per);
+            foreach (string p in str)
                 Console.WriteLine($"{p}");
         }
         static void Main(string[] args)
         {
             Console.Write("Введите предложение: ");
             string Predlogenie = Console.ReadLine();
-            SplittingStringWords(Predlogenie);
+            Print(Predlogenie);
 
 
 
